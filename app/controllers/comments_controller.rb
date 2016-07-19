@@ -19,6 +19,9 @@ class CommentsController < ApplicationController
 		if @comment.save
 			puts "if"
 			flash[:success] = "Comment successfully added"
+			# @article = Article.find(@comment.article_id)
+
+			redirect_to "/articles/#{@comment.article_id}"
 			# redirect_to article_path(@article)
 		else
 			puts "else"
