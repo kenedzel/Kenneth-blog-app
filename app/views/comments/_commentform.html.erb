@@ -1,0 +1,20 @@
+<!-- dummy comment block -->
+	<%= form_for(@comment, :remote => true, :html=> {class: "form-horizontal", role: "form"}) do |f| %>
+		<% if logged_in? %>
+			 <div class="form-group">
+			 	<%= f.hidden_field :article_id, :value => "#{params[:id]}" %>
+				<%= f.label :comment %>
+				<%= f.text_area :content, class: "form-control" %>
+			</div>
+			<div class="form-group">
+					<%= f.submit class: 'btn btn-default btn-md btn-block' %>
+			</div>
+		<% end %>
+	<% end %>
+
+	<% @article.comments.each do |comment| %>
+	  <p>
+	    <%= comment.user_id %>
+	    <%= comment.content %>
+	  </p>
+	<% end %>

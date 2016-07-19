@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0'
+gem 'rails', '4.2.6'
 #bcrypt
 gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '~> 3.1.0'
@@ -43,6 +43,12 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
+   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+ gem 'spring'
+ gem 'better_errors'
+ gem 'rack-mini-profiler'
+ gem 'binding_of_caller'
+ gem 'quiet_assets'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
