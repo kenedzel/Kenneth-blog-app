@@ -1,4 +1,4 @@
-class RemoveAddPassowrdFromUsers < ActiveRecord::Migration[5.0]
+class RemoveAddPassowrdFromUsers < ActiveRecord::Migration
   def change
     remove_column :users, :passowrd_digest, :string
   end

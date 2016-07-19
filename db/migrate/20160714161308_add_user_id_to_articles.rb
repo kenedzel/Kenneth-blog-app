@@ -1,4 +1,4 @@
-class AddUserIdToArticles < ActiveRecord::Migration[5.0]
+class AddUserIdToArticles < ActiveRecord::Migration
   def change
   	add_column :articles, :user_id, :integer
   end
