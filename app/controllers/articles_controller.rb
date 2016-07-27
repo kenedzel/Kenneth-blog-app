@@ -40,7 +40,11 @@ class ArticlesController < ApplicationController
 	end
 
 	def destroy
-		
+		@comment = Comment.find(params[:id])
+		@comment.destroy
+		flash[:danger] = "User and all articles of the comment has been deleted"
+		redirect_to comments_path
+
 		@article.destroy
 		flash[:danger] = "Article was successfully deleted"
 		redirect_to articles_path
